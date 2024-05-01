@@ -1,0 +1,22 @@
+@import url("https://use.typekit.net/phx2elh.css");
+
+* {
+  font-family: "Source Sans Pro", "source-sans-pro", "sans-serif";
+}
+
+.content-wrapper p.paragraph {
+  font-size: var(--size-m);
+}
+
+a {
+  color: orange;
+
+}
+
+.content-wrapper {
+  p.no-of-results-bottom {
+    max-width: 100%;
+    text-align: center;
+    font-size: var(--size-m);
+  }
+}

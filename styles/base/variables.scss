@@ -1,0 +1,44 @@
+:root {
+
+  //BRING IN SCSS VARIABLES FROM THE DESIGN SYSTEM AND DET THEM AS CSS VAR'S
+  //font sizes
+  --size-xxxxl: #{$size-xxxxl};
+  --size-xxxl: #{$size-xxxl};
+  --size-xxl: #{$size-xxl};
+  --size-xl: #{$size-xl};
+  --size-l: #{$size-l};
+  --size-m: #{$size-m};
+  --size-s: #{$size-s};
+  --size-xs: #{$size-xs};
+
+  //spacing
+  --space-l: #{$space-l};
+  --space-m: #{$space-m};
+  --space-s: #{$space-s};
+  --space-xl: #{$space-xl};
+  --space-xs: #{$space-xs};
+  --space-xxl: #{$space-xxl};
+
+  //content max width
+  --max-width: 1500px;
+}
+
+@media all and (max-width: $media-query-value-s) {
+  :root {
+    --size-xxxxl: #{$size-xxxxl-mobile};
+    --size-xxxl: #{$size-xxxl-mobile};
+    --size-xxl: #{$size-xxl-mobile};
+    --size-xl: #{$size-xl-mobile};
+    --size-l: #{$size-l-mobile};
+    --size-m: #{$size-m-mobile};
+    --size-s: #{$size-s-mobile};
+    --size-xs: #{$size-xs-mobile};
+
+    --space-l: #{$space-m};
+    --space-m: #{$space-s};
+    --space-s: #{$space-xs};
+    --space-xl: #{$space-l};
+    --space-xs: #{$space-xs};
+    --space-xxl: #{$space-xl};
+  }
+}

@@ -1,0 +1,257 @@
+[role="table"] {
+}
+
+[role="rowgroup"] {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  border-bottom: 1px solid;
+}
+
+.no-results-message {
+  padding-top: $space-m;
+  .message {
+    margin: 0 auto;
+  }
+}
+.owl-grid-table__cell .checkbox-wrapper {
+  margin-bottom: 20px;
+}
+
+/* DESIGN PACK VERSION: 1.21 */
+.owl-grid-table {
+  border-radius: $radius-default;
+  background-color: $color-white;
+  font-size: var(--size-s);
+  box-shadow: $shadow-table;
+  .owl-grid-table__header {
+    background-color: white;
+    .owl-grid-table__row:nth-child(odd) {
+      background-color: inherit;
+    }
+  }
+}
+
+.owl-grid-table__row {
+  background-color: transparent;
+  display: grid;
+}
+
+.owl-grid-table__cell {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.owl-grid-table__cell a {
+  // white-space: nowrap;
+}
+
+.owl-grid-table__cell--breakable a {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.owl-grid-table__cell--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.owl-grid-table__cell--right {
+  justify-content: flex-end;
+}
+
+.owl-grid-table__cell--left {
+  justify-content: flex-start;
+}
+
+.owl-grid-table__cell.sortable {
+  cursor: pointer;
+}
+
+@media all and (max-width: $media-query-value-s) {
+  .owl-grid-table__cell--right {
+    justify-content: flex-start;
+  }
+  .content-wrapper {
+    .owl-grid-table__body {
+      .owl-grid-table__row:nth-child(odd) {
+        background-color: white;
+      }
+    }
+  }
+}
+
+.owl-grid-table__header .owl-grid-table__row {
+  background-color: inherit;
+}
+
+.owl-grid-table__header .owl-grid-table__row .owl-grid-table__cell {
+  padding: 0 12px;
+  min-height: 72px;
+  font-weight: 600;
+  color: var(--owl-pink);
+}
+
+.owl-grid-table__body .owl-grid-table__row:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.homework-group-details-layout {
+  grid-template-columns: max-content 2fr repeat(4, 1fr);
+}
+
+@media all and (max-width: $media-query-value-s) {
+  .owl-grid-table {
+    border-color: transparent;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .owl-grid-table__header {
+    display: none;
+  }
+
+  .owl-grid-table__row {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid $color-grey-light;
+    grid-template-columns: 1fr !important;
+    margin-bottom: 10px;
+    padding: $space-s;
+  }
+
+  .owl-grid-table__cell {
+    padding: $space-xxs 0px;
+  }
+
+  .owl-grid-table__cell::before {
+    content: attr(data-label) ":";
+    color: var(--owl-dark-grey);
+    display: inline-flex;
+    margin-right: $space-xxs;
+    font-weight: 500;
+  }
+}
+
+[data-label="Select homework"] {
+  /* Attribute has this exact value */
+
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  ::before {
+    content: "";
+  }
+}
+
+.checkbox-wrapper {
+  grid-auto-columns: 1fr max-content;
+  display: grid;
+  margin-bottom: $size-xs;
+  &.small {
+    .container {
+      font-size: $size-s;
+      .checkmark {
+        height: 20px;
+        width: 20px;
+        &:after {
+          left: 8px;
+          top: 4px;
+          width: 3px;
+          height: 8px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  label {
+    grid-column: 1;
+  }
+  .badge {
+    grid-column: 2;
+  }
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-family: $font-text;
+    font-weight: $weight-light;
+    line-height: $line-height-m;
+    color: $color-charcoal;
+    font-size: $size-m;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .more-information {
+    padding-left: 35px;
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $color-grey-lighter;
+    border: 1px solid $color-grey-dark;
+    box-shadow: inset 0px 4px 4px #0000002b;
+    border-radius: 5px;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: $color-charcoal;
+    border: 1px solid $color-charcoal;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .container input:focus ~ .checkmark {
+    outline: 3px solid $color-pink;
+    outline-offset: $outline-offset;
+  }
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.table-item-count {
+  display: flex;
+  justify-content: end;
+  height: 50px;
+  align-items: center;
+}
