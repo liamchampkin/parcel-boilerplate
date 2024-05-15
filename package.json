@@ -2,15 +2,20 @@
   "name": "parcel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "start": "parcel index.html --no-source-maps"
+    "clean-dist": "rm -rf dist && mkdir dist",
+    "clear-cache": "rm -rf .parcel-cache",
+    "init": "npm run clean-dist && npm run clear-cache",
+    "start": "npm run init && parcel",
+    "build": "npm run init && parcel build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
+    "@parcel/transformer-vue": "^2.12.0",
     "parcel": "^2.12.0"
   }
 }
