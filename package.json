@@ -1,7 +1,7 @@
 {
-  "name": "parcel",
-  "version": "1.0.0",
-  "description": "",
+  "name": "Parcel boiler plate",
+  "version": "2.0.1",
+  "description": "A simple HTML, SCSS and JavaScript compiler",
   "source": "src/index.html",
   "scripts": {
     "clean-dist": "rm -rf dist && mkdir dist",
@@ -11,11 +11,13 @@
     "build": "npm run init && parcel build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Liam Champkin",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/plugin": "^2.13.3",
     "@parcel/transformer-sass": "^2.12.0",
     "@parcel/transformer-vue": "^2.12.0",
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "parcel-namer-custom": "^0.2.0"
   }
 }
