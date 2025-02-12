@@ -3,6 +3,9 @@
 	"transformers": {
 		"*.scss": [
 			"@parcel/transformer-sass"
+		],
+		"*.css": [
+			"@parcel/transformer-css"
 		]
 	},
 	"namers": [
