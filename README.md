@@ -24,7 +24,7 @@ Images are stored in the `src/assets/images` directory. During the build process
 
 SCSS files are located in the `src/styles` directory. The build process compiles these SCSS files into CSS and places them in the `dist/css` directory.
 
-## Using images within SCSS
+### Using images within SCSS
 
 Always us the path `../assets/images/filename.jpg`
 
