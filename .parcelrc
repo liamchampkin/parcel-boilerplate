@@ -1,6 +1,10 @@
 {
 	"extends": "@parcel/config-default",
 	"transformers": {
+		"*.html": [
+			"./ignore-links-transformer.js",
+			"..."
+		],
 		"*.scss": [
 			"@parcel/transformer-sass"
 		],
