@@ -9,7 +9,7 @@
     "init": "npm run clean-dist && npm run clear-cache",
     "start": "npm run init && parcel",
     "build": "npm run init && parcel build",
-    "build:docs": "npx -p parcel-bundler init parcel build src/index.html --no-minify"
+    "build:docs": "npm run init && parcel build src/index.html --no-minify"
   },
   "keywords": [],
   "author": "Liam Champkin",
