@@ -8,7 +8,8 @@
     "clear-cache": "rm -rf .parcel-cache",
     "init": "npm run clean-dist && npm run clear-cache",
     "start": "npm run init && parcel",
-    "build": "npm run init && parcel build"
+    "build": "npm run init && parcel build",
+    "build:docs": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "Liam Champkin",
