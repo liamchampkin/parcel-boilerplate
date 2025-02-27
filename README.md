@@ -63,3 +63,9 @@ npm run build
 ```
 
 This command will compile SCSS files to CSS, resolve image paths, and place the output in the `dist` directory with the correct structure.
+
+## Netlify
+
+To run the build process on Netlify you will need to set the following environment variable
+
+`PARCEL_WORKER_BACKEND` to `process`
