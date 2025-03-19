@@ -6,3 +6,7 @@ let count = 0;
 							count++;
 	disp.innerHTML = count;
 }
+
+window.test = function test() {
+	console.log("hey there sweet cheeks");
+}
